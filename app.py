@@ -77,9 +77,10 @@ else:
     os.system(f"git clone https://github.com/lodimasq/batch-checkpoint-merger /home/user/app/stable-diffusion-webui/extensions/batch-checkpoint-merger")
     os.system(f"git clone https://github.com/eyriewow/merge-models /home/user/app/stable-diffusion-webui/extensions/merge-models")
     os.system(f"git clone https://github.com/OedoSoldier/enhanced-img2img /home/user/app/stable-diffusion-webui/extensions/enhanced-img2img")
-    os.system(f"git clone https://https://github.com/Maurdekye/model-kitchen /home/user/app/stable-diffusion-webui/extensions/model-kitchen")
+    os.system(f"git clone https://github.com/Maurdekye/model-kitchen /home/user/app/stable-diffusion-webui/extensions/model-kitchen")
     os.system(f"git clone https://github.com/hako-mikan/sd-webui-supermerger /home/user/app/stable-diffusion-webui/extensions/sd-webui-supermerger")
     os.system(f"git clone https://github.com/j4ded/sdweb-merge-block-weighted-gui /home/user/app/stable-diffusion-webui/extensions/sdweb-merge-block-weighted-gui-alt")
+    os.system(f"git clone https://github.com/kex0/batch-face-swap /home/user/app/stable-diffusion-webui/extensions/batch-face-swap")
     
     # Please duplicate this space and delete # character in front of the model you want to use or add here more ckpts with same structure os.system(f"wget -q https://CKPT_URL -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/CKPT_NAME.ckpt")
     #os.system(f"wget -q https://huggingface.co/nitrosocke/Arcane-Diffusion/resolve/main/arcane-diffusion-v3.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/arcane-diffusion-v3.ckpt")
