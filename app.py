@@ -11,11 +11,11 @@ os.system(f"git clone -b v1.5 https://github.com/camenduru/stable-diffusion-webu
 os.chdir("/home/user/app/stable-diffusion-webui")
 
 # ----------------------------Please duplicate this space and delete this block if you don't want to see the extra header----------------------------
-os.system(f"wget -q https://github.com/camenduru/webui/raw/main/header_patch.py -O /home/user/app/header_patch.py")
+os.system(f"wget -q https://github.com/AdamOswald/webui/raw/main/header_patch.py -O /home/user/app/header_patch.py")
 os.system(f"sed -i -e '/demo:/r /home/user/app/header_patch.py' /home/user/app/stable-diffusion-webui/modules/ui.py")
 # ---------------------------------------------------------------------------------------------------------------------------------------------------
 
-os.system(f"wget -q https://github.com/camenduru/webui/raw/main/env_patch.py -O /home/user/app/env_patch.py")
+os.system(f"wget -q https://github.com/AdamOswald/webui/raw/main/env_patch.py -O /home/user/app/env_patch.py")
 os.system(f"sed -i -e '/import image_from_url_text/r /home/user/app/env_patch.py' /home/user/app/stable-diffusion-webui/modules/ui.py")
 
 # ------------------------------------------------------------------v1.5-----------------------------------------------------------------------------
@@ -34,8 +34,8 @@ if "IS_SHARED_UI" in os.environ:
 
     os.system(f"rm -rfv /home/user/app/stable-diffusion-webui/scripts/")
     
-    os.system(f"wget -q https://github.com/camenduru/webui/raw/main/shared-config.json -O /home/user/app/shared-config.json")
-    os.system(f"wget -q https://github.com/camenduru/webui/raw/main/shared-ui-config.json -O /home/user/app/shared-ui-config.json")
+    os.system(f"wget -q https://github.com/AdamOswald/webui/raw/main/shared-config.json -O /home/user/app/shared-config.json")
+    os.system(f"wget -q https://github.com/AdamOswald/webui/raw/main/shared-ui-config.json -O /home/user/app/shared-ui-config.json")
 
     os.system(f"wget -q {os.getenv('MODEL_LINK')} -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/{os.getenv('MODEL_NAME')}")
     os.system(f"wget -q {os.getenv('VAE_LINK')} -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/{os.getenv('VAE_NAME')}")
@@ -70,16 +70,27 @@ else:
     os.system(f"git clone https://github.com/yfszzx/stable-diffusion-webui-images-browser /home/user/app/stable-diffusion-webui/extensions/stable-diffusion-webui-images-browser")
     os.system(f"git clone https://github.com/deforum-art/deforum-for-automatic1111-webui /home/user/app/stable-diffusion-webui/extensions/deforum-for-automatic1111-webui")
     os.system(f"git clone https://github.com/camenduru/stable-diffusion-webui-huggingface /home/user/app/stable-diffusion-webui/extensions/stable-diffusion-webui-huggingface")
+    os.system(f"git clone https://github.com/bbc-mc/merge-percentage-visualize /home/user/app/stable-diffusion-webui/extensions/merge-percentage-visualize")
+    os.system(f"git clone https://github.com/bbc-mc/sdweb-merge-board /home/user/app/stable-diffusion-webui/extensions/sdweb-merge-board")
+    os.system(f"git clone https://github.com/bbc-mc/sdweb-merge-block-weighted-gui /home/user/app/stable-diffusion-webui/extensions/sdweb-merge-block-weighted-gui")
     
     # Please duplicate this space and delete # character in front of the model you want to use or add here more ckpts with same structure os.system(f"wget -q https://CKPT_URL -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/CKPT_NAME.ckpt")
     #os.system(f"wget -q https://huggingface.co/nitrosocke/Arcane-Diffusion/resolve/main/arcane-diffusion-v3.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/arcane-diffusion-v3.ckpt")
-    #os.system(f"wget -q https://huggingface.co/DGSpitzer/Cyberpunk-Anime-Diffusion/resolve/main/Cyberpunk-Anime-Diffusion.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/Cyberpunk-Anime-Diffusion.ckpt")
-    #os.system(f"wget -q https://huggingface.co/prompthero/midjourney-v4-diffusion/resolve/main/mdjrny-v4.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/mdjrny-v4.ckpt")
-    os.system(f"wget -q https://huggingface.co/nitrosocke/mo-di-diffusion/resolve/main/moDi-v1-pruned.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/moDi-v1-pruned.ckpt")
+    os.system(f"wget -q https://huggingface.co/DGSpitzer/Cyberpunk-Anime-Diffusion/resolve/main/Cyberpunk-Anime-Diffusion.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/Cyberpunk-Anime-Diffusion.ckpt")
+    os.system(f"wget -q https://huggingface.co/prompthero/midjourney-v4-diffusion/resolve/main/mdjrny-v4.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/mdjrny-v4.ckpt")
+    #os.system(f"wget -q https://huggingface.co/nitrosocke/mo-di-diffusion/resolve/main/moDi-v1-pruned.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/moDi-v1-pruned.ckpt")
     #os.system(f"wget -q https://huggingface.co/Fictiverse/Stable_Diffusion_PaperCut_Model/resolve/main/PaperCut_v1.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/PaperCut_v1.ckpt")
     #os.system(f"wget -q https://huggingface.co/lilpotat/sa/resolve/main/samdoesarts_style.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/samdoesarts_style.ckpt")
-    #os.system(f"wget -q https://huggingface.co/hakurei/waifu-diffusion-v1-3/resolve/main/wd-v1-3-float32.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/wd-v1-3-float32.ckpt")
-    #os.system(f"wget -q https://huggingface.co/CompVis/stable-diffusion-v-1-4-original/resolve/main/sd-v1-4.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/sd-v1-4.ckpt")
+    os.system(f"wget -q https://huggingface.co/hakurei/waifu-diffusion-v1-3/resolve/main/wd-v1-3-float32.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/wd-v1-3-float32.ckpt")
+    os.system(f"wget -q https://huggingface.co/CompVis/stable-diffusion-v-1-4-original/resolve/main/sd-v1-4.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/sd-v1-4.ckpt")
+    os.system(f"wget -q https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/v1-5-pruned-emaonly.ckpt")
+    os.system(f"wget -q https://huggingface.co/runwayml/stable-diffusion-inpainting/resolve/main/sd-v1-5-inpainting.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/sd-v1-5-inpainting.ckpt")
+    os.system(f"wget -q https://huggingface.co/Falon/sangonomiya-kokomi/blob/main/Sangonomiya_Kokomi.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/Sangonomiya_Kokomi.ckpt")
+    os.system(f"wget -q https://huggingface.co/katakana/2D-Mix/blob/main/2D-Mix.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/2D-Mix.ckpt")
+    os.system(f"wget -q https://huggingface.co/katakana/Anime-Merged/blob/main/Anime-Merged.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/Anime-Merged.ckpt")
+    os.system(f"wget -q https://huggingface.co/TheRafal/everything-v1/blob/main/everything-v1-3.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/everything-v1-3.ckpt")
+    os.system(f"wget -q https://huggingface.co/Eppinette/Cyberware/blob/main/cyberware_V3_m_cyberware_token_style_class_word.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/cyberware_V3_m_cyberware_token_style_class_word.ckpt")
+    os.system(f"wget -q https://huggingface.co/Eppinette/Cyberware/blob/main/cyberware_trinart_cyberware_token_style_class_word.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/cyberware_trinart_cyberware_token_style_class_word.ckpt")
     #os.system(f"wget -q https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/v1-5-pruned-emaonly.ckpt")
     #os.system(f"wget -q https://huggingface.co/runwayml/stable-diffusion-inpainting/resolve/main/sd-v1-5-inpainting.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/sd-v1-5-inpainting.ckpt")
     #os.system(f"wget -q https://huggingface.co/Linaqruf/anything-v3.0/resolve/main/Anything-V3.0-pruned.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/Anything-V3.0-pruned.ckpt")
