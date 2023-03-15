@@ -88,7 +88,6 @@ else:
     os.system(f"git clone https://github.com/Akegarasu/sd-webui-model-converter /home/user/app/stable-diffusion-webui/extensions/sd-webui-model-converter")
     os.system(f"git clone https://github.com/yfszzx/stable-diffusion-webui-inspiration /home/user/app/stable-diffusion-webui/extensions/stable-diffusion-webui-inspiration") 
     os.system(f"git clone https://github.com/toriato/easy-stable-diffusion /home/user/app/stable-diffusion-webui/extensions/easy-stable-diffusion")   
-    os.system(f"git clone https://github.com/camenduru/stable-diffusion-webui-huggingface /home/user/app/stable-diffusion-webui/extensions/stable-diffusion-webui-huggingface")
     os.system(f"git clone https://github.com/camenduru/stable-diffusion-webui-converter /home/user/app/stable-diffusion-webui/extensions/stable-diffusion-webui-converter")
     os.system(f"git clone https://github.com/camenduru/batchlinks-webui /home/user/app/stable-diffusion-webui/extensions/batchlinks-webui")
     os.system(f"git clone https://github.com/mix1009/model-keyword /home/user/app/stable-diffusion-webui/extensions/model-keyword")
