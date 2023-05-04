@@ -7,7 +7,7 @@ if("A10G" in gpu_info):
 elif("T4" in gpu_info):
     os.system(f"pip install -q https://github.com/camenduru/stable-diffusion-webui-colab/releases/download/0.0.15/xformers-0.0.15.dev0+1515f77.d20221130-cp38-cp38-linux_x86_64.whl")
 
-os.system(f"git clone https://github.com/OswaldDevolpment stable-diffusion-webui /home/user/app/stable-diffusion-webui")
+os.system(f"git clone https://github.com/OswaldDevolpment/stable-diffusion-webui /home/user/app/stable-diffusion-webui")
 os.chdir("/home/user/app/stable-diffusion-webui")
 
 # ----------------------------Please duplicate this space and delete this block if you don't want to see the extra header----------------------------
@@ -77,8 +77,9 @@ else:
     os.system(f"git clone https://github.com/camenduru/stable-diffusion-webui-huggingface /home/user/app/stable-diffusion-webui/extensions/stable-diffusion-webui-huggingface")
     os.system(f"git clone https://github.com/kohya-ss/sd-webui-additional-networks /home/user/app/stable-diffusion-webui/extensions/sd-webui-additional-networks")
     
-    # Please duplicate this space and delete # character in front of the model you want to use or add here more ckpts with same structure os.system(f"wget -q https://CKPT_URL -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/CKPT_NAME.ckpt")
-    os.system(f"wget -q https://huggingface.co/Eppinette/Cyberware/resolve/main/cyberware_trinart_cyberware_token_style_class_word.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/cyberware_trinart_cyberware_token_style_class_word.ckpt")
+    # Please duplicate this space and delete # character in front of the model you want to use or add here more ckpts with same structure os.system(f"wget -q https://CKPT_URL -O /home/user/app/stable-diffusion-webui/models/lora/CKPT_NAME.ckpt")
+    os.system(f"wget -q https://civitai.com/models/1493?modelVersionId=59168 -O /home/user/app/stable-diffusion-webui/models/lora/sonicdiffusion_v3Beta3.safetensors")
+    os.system(f"wget -q https://civitai.com/api/download/models/59168?type=Model&format=SafeTensor&size=pruned&fp=fp16 -O /home/user/app/stable-diffusion-webui/models/lora/sonicdiffusion_v3Beta3.safetensors")
     #os.system(f"wget -q https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/v1-5-pruned-emaonly.ckpt")
     #os.system(f"wget -q https://huggingface.co/runwayml/stable-diffusion-inpainting/resolve/main/sd-v1-5-inpainting.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/sd-v1-5-inpainting.ckpt")
     #os.system(f"wget -q https://huggingface.co/Linaqruf/anything-v3.0/resolve/main/Anything-V3.0-pruned.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/Anything-V3.0-pruned.ckpt")
@@ -88,7 +89,7 @@ else:
     os.system(f"wget -q https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-ema-pruned.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/v2-1_768-ema-pruned.ckpt")
     os.system(f"wget -q https://raw.githubusercontent.com/Stability-AI/stablediffusion/main/configs/stable-diffusion/v2-inference-v.yaml -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/v2-1_768-ema-pruned.yaml")
 
-    os.system(f"wget -q {os.getenv('MODEL_LINK')} -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/{os.getenv('MODEL_NAME')}")
+    os.system(f"wget -q {os.getenv('MODEL_LINK')} -O /home/user/app/stable-diffusion-webui/models/lora/{os.getenv('MODEL_NAME')}")
     os.system(f"wget -q {os.getenv('VAE_LINK')} -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/{os.getenv('VAE_NAME')}")
     os.system(f"wget -q {os.getenv('YAML_LINK')} -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/{os.getenv('YAML_NAME')}")
 
