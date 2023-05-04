@@ -1,6 +1,8 @@
 import os
 from subprocess import getoutput
 
+os.system(f"python -m pip install --upgrade pip")
+
 gpu_info = getoutput('nvidia-smi')
 if("A10G" in gpu_info):
     os.system(f"pip install -q https://github.com/camenduru/stable-diffusion-webui-colab/releases/download/0.0.15/xformers-0.0.15.dev0+4c06c79.d20221205-cp38-cp38-linux_x86_64.whl")
