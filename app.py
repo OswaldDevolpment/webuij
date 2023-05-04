@@ -1,7 +1,7 @@
 import os
 from subprocess import getoutput
 
-os.system(f"python -m pip install --upgrade pip")
+os.system(f"pip install --upgrade pip")
 
 gpu_info = getoutput('nvidia-smi')
 if("A10G" in gpu_info):
