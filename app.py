@@ -11,11 +11,11 @@ os.system(f"git clone https://github.com/OswaldDevolpment/stable-diffusion-webui
 os.chdir("/home/user/app/stable-diffusion-webui")
 
 # ----------------------------Please duplicate this space and delete this block if you don't want to see the extra header----------------------------
-os.system(f"wget -q https://github.com/OswaldDevolpment/webui/raw/main/header_patch.py -O /home/user/app/header_patch.py")
+os.system(f"wget -q https://github.com/OswaldDevolpment/webuij/raw/main/header_patch.py -O /home/user/app/header_patch.py")
 os.system(f"sed -i -e '/demo:/r /home/user/app/header_patch.py' /home/user/app/stable-diffusion-webui/modules/ui.py")
 # ---------------------------------------------------------------------------------------------------------------------------------------------------
 
-os.system(f"wget -q https://github.com/OswaldDevolpment/webui/raw/main/env_patch.py -O /home/user/app/env_patch.py")
+os.system(f"wget -q https://github.com/OswaldDevolpment/webuij/raw/main/env_patch.py -O /home/user/app/env_patch.py")
 os.system(f"sed -i -e '/import image_from_url_text/r /home/user/app/env_patch.py' /home/user/app/stable-diffusion-webui/modules/ui.py")
 
 # ------------------------------------------------------------------v1.5-----------------------------------------------------------------------------
@@ -34,8 +34,8 @@ if "IS_SHARED_UI" in os.environ:
 
     os.system(f"rm -rfv /home/user/app/stable-diffusion-webui/scripts/")
     
-    os.system(f"wget -q https://github.com/OswaldDevolpment/webui/raw/main/shared-config.json -O /home/user/app/shared-config.json")
-    os.system(f"wget -q https://github.com/OswaldDevolpment/webui/raw/main/shared-ui-config.json -O /home/user/app/shared-ui-config.json")
+    os.system(f"wget -q https://github.com/OswaldDevolpment/webuij/raw/main/shared-config.json -O /home/user/app/shared-config.json")
+    os.system(f"wget -q https://github.com/OswaldDevolpment/webuij/raw/main/shared-ui-config.json -O /home/user/app/shared-ui-config.json")
 
     os.system(f"wget -q {os.getenv('MODEL_LINK')} -O /home/user/app/stable-diffusion-webui/models/lora/{os.getenv('MODEL_NAME')}")
     os.system(f"wget -q {os.getenv('VAE_LINK')} -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/{os.getenv('VAE_NAME')}")
