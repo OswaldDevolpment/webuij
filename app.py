@@ -82,6 +82,7 @@ else:
     # Please duplicate this space and delete # character in front of the model you want to use or add here more ckpts with same structure os.system(f"wget -q https://CKPT_URL -O /home/user/app/stable-diffusion-webui/models/lora/CKPT_NAME.ckpt")
     os.system(f"wget -q https://civitai.com/models/1493?modelVersionId=59168 -O /home/user/app/stable-diffusion-webui/models/lora/sonicdiffusion_v3Beta3.safetensors")
     os.system(f"wget -q https://civitai.com/api/download/models/59168?type=Model&format=SafeTensor&size=pruned&fp=fp16 -O /home/user/app/stable-diffusion-webui/models/lora/sonicdiffusion_v3Beta3.safetensors")
+    #os.system(f"wget -q https://huggingface.co/CompVis/stable-diffusion-v-1-4-original/resolve/main/sd-v1-4.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/sd-v1-4.ckpt")
     #os.system(f"wget -q https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/v1-5-pruned-emaonly.ckpt")
     #os.system(f"wget -q https://huggingface.co/runwayml/stable-diffusion-inpainting/resolve/main/sd-v1-5-inpainting.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/sd-v1-5-inpainting.ckpt")
     #os.system(f"wget -q https://huggingface.co/Linaqruf/anything-v3.0/resolve/main/Anything-V3.0-pruned.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/Anything-V3.0-pruned.ckpt")
