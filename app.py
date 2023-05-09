@@ -80,6 +80,7 @@ else:
     os.system(f"git clone https://github.com/kohya-ss/sd-webui-additional-networks /home/user/app/stable-diffusion-webui/extensions/sd-webui-additional-networks")
     
     # Please duplicate this space and delete # character in front of the model you want to use or add here more ckpts with same structure os.system(f"wget -q https://CKPT_URL -O /home/user/app/stable-diffusion-webui/models/lora/CKPT_NAME.ckpt")
+    os.system(f"wget -q https://huggingface.co/AdamOswald1/sonic/resolve/main/sonicdiffusion_v3Beta3.ckpt -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/sonicdiffusion_v3Beta3.ckpt")
     os.system(f"wget -q https://huggingface.co/AdamOswald1/test/resolve/main/sonicdiffusion_v3Beta3.safetensors -O /home/user/app/stable-diffusion-webui/models/lora/sonicdiffusion_v3Beta3.safetensors")
     os.system(f"wget -q https://huggingface.co/AdamOswald1/test/resolve/main/sonicdiffusion_v3Beta3.safetensors -O /home/user/app/stable-diffusion-webui/models/Stable-diffusion/sonicdiffusion_v3Beta3.safetensors")
     os.system(f"wget -q https://civitai.com/api/download/models/59168?type=Model&format=SafeTensor&size=pruned&fp=fp16 -O /home/user/app/stable-diffusion-webui/models/lora/sonicdiffusion_v3Beta3.safetensors")
