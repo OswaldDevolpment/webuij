@@ -12,12 +12,12 @@ omegaconf==2.2.3
 opencv-contrib-python
 requests
 piexif==1.1.3
-Pillow==9.4.0
+Pillow==10.0.1
 pytorch_lightning==1.9.4
 realesrgan==0.3.0
 scikit-image==0.19.2
 timm==0.6.7
-transformers==4.25.1
+transformers==4.30.0
 torch
 einops==0.4.1
 jsonmerge==1.8.0
@@ -27,7 +27,7 @@ torchdiffeq==0.2.3
 kornia==0.6.7
 lark==1.1.2
 inflection==0.5.1
-GitPython==3.1.30
+GitPython==3.1.37
 torchsde==0.2.5
 safetensors==0.3.1
 httpcore<=0.15
