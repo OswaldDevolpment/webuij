@@ -27,7 +27,7 @@ torchdiffeq==0.2.3
 kornia==0.6.7
 lark==1.1.2
 inflection==0.5.1
-GitPython==3.1.37
+GitPython==3.1.41
 torchsde==0.2.5
 safetensors==0.3.1
 httpcore<=0.15
