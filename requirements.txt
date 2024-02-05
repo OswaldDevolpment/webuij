@@ -31,7 +31,7 @@ GitPython==3.1.37
 torchsde==0.2.5
 safetensors==0.3.1
 httpcore<=0.15
-fastapi==0.94.0
+fastapi==0.109.1
 mediapipe
 psutil
 rich
